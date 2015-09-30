@@ -19,7 +19,7 @@ class Database{
 	private $host;
 	private $pdo;
 
-	public function __construct($database, $user = 'root', $pass = 'root', $host = 'localhost'){
+	public function __construct($database, $user = 'root', $pass = '', $host = 'localhost'){
 		$this->database = $database;
 		$this->user = $user;
 		$this->pass = $pass;
@@ -30,8 +30,8 @@ class Database{
 	 private function getPDO(){
 	 	//Connection à la database
 	 	if ($pdo === null){ // Si on a pas encore d'objet PDO (on est pas connecté)
-		 	$pdo = new PDO('mysql:dbname='.$this->database.';host='.$this->host.';', $this->user, $this->pass); // Alors on se connecte
-		 	if(this->host == 'localhost'){ // Si on est en dev
+		 	$pdo = new PDO('mysql:dbname='.$this->database.';host='.$this->host.';charset=UTF8', $this->user, $this->pass); // Alors on se connecte
+		 	if($this->host == 'localhost'){ // Si on est en dev
 		 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Alors on renvoi des erreurs
 		 	}
 	 		$this->pdo = $pdo;
