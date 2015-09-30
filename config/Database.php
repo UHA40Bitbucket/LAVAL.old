@@ -1,6 +1,6 @@
 <?php
-
 namespace App\Core;
+
 /*
 * Classe de configuration de 
 * la connection à la base de donnée
@@ -11,7 +11,7 @@ namespace App\Core;
 *
 */
 
-class Database extends Model{ 
+class Database{ 
 
 	private $database;
 	private $user;
