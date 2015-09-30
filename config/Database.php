@@ -1,4 +1,6 @@
 <?php
+
+namespace App\Core;
 /*
 * Classe de configuration de 
 * la connection à la base de donnée
@@ -9,9 +11,9 @@
 *
 */
 
-class Database{ 
+class Database extends Model{ 
 
-	private $database; 
+	private $database;
 	private $user;
 	private $pass;
 	private $host;
@@ -28,7 +30,7 @@ class Database{
 	 private function getPDO(){
 	 	//Connection à la database
 	 	if ($pdo === null){ // Si on a pas encore d'objet PDO (on est pas connecté)
-		 	$pdo = new PDO('mysql:dbname='.$this->database.';host='.$this->host., $this->user, $this->pass); // Alors on se connecte
+		 	$pdo = new PDO('mysql:dbname='.$this->database.';host='.$this->host.';', $this->user, $this->pass); // Alors on se connecte
 		 	if(this->host == 'localhost'){ // Si on est en dev
 		 		$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING); // Alors on renvoi des erreurs
 		 	}
