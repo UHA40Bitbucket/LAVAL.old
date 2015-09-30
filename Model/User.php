@@ -1,9 +1,8 @@
 <?php
+namespace App\Model;
+use App\Core;
 
-/*
- * Gestion des données utilisateur
- */
-class User{
-
+class UserModel{
+	
 
 }
