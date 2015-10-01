@@ -1,7 +1,7 @@
-<?php namespace App\core\Controller;
+<?php namespace App\Core\Controller;
 
-use App\core\View;
-use App\core\Model;
+use App\Core\View;
+use App\Core\Model;
  /**
   * @Controlleur principal
   */

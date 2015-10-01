@@ -2,8 +2,8 @@
 
 
 <?php
-namespace App\Controller;
-use App\Core;
+
+use App\Core\Controller\Controller;
 
 /*
 *  Gestion de la logique utilisateur

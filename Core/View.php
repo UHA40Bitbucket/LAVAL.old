@@ -1,4 +1,4 @@
-<?php namespace App\core\View;
+<?php namespace App\Core\View;
 
   class View {
 
