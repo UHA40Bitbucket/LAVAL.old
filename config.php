@@ -1,3 +1,3 @@
 <?php 
-define('URL', 'http://laval.io/');
+define('URL', 'http://localhost/');
 define('LIBS', 'App/Core/');

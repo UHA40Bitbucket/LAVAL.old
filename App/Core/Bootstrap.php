@@ -1,13 +1,14 @@
 <?php 
+
 class Bootstrap {
 
 	private $_url = null;
 	private $_controller = null;
 
-	private $_controllerPath = 'controllers/'; 
-	private $_modelPath = 'models/'; 
+	private $_controllerPath = 'APP/Controller/'; 
+	private $_modelPath = 'App/Model/'; 
 	private $_errorFile = 'error.php';
-	private $_defaultFile = 'index.php';
+	private $_defaultFile = 'IndexController.php';
 
 	/**
 	 * initialisation du Bootstrap
@@ -54,7 +55,7 @@ class Bootstrap {
 	private function _loadDefaultController()
 	{
 		require $this->_controllerPath . $this->_defaultFile;
-		$this->_controller = new Index();
+		$this->_controller = new IndexController();
 		$this->_controller->index();
 	}
 
@@ -65,7 +66,7 @@ class Bootstrap {
 	 */
 	private function _loadExistingController()
 	{
-		$file = $this->_controllerPath . $this->_url[0] . '.php';
+		$file = $this->_controllerPath . $this->_url[0] . 'Controller.php';
 
 		if (file_exists($file)) {
 			require $file;
