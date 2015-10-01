@@ -1,5 +1,8 @@
 <?php
-
-	require "vendor/autolaod.php";
-
-  $app = new Bootstrap();
+   require 'config.php';
+	function _autoload($lass){
+		require LIBS .$class. '.php';
+	}
+	
+	$app = new Bootstrap();
+	$app->init();
