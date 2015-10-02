@@ -13,9 +13,26 @@ class UsersController extends Controller {
 			}
 		}
 	}
+
+	/*
+	 * Fonction de déconnection
+	 * $this->User->logout()
+	 * envoie une variable $msg à la vue
+	 */
 	function logout() {
+		session_destroy();
+		$msg = "Vous êtes bien deconnecté";
+		$this->view->msg = $msg;
+		$this->view->render('logout');
+
 	}
-	function register() {
+
+	/*
+	 * Fonction d'inscription
+	 * $this->User->register($_POST['user']);
+	 */
+	function register(array $user) {
+		
 	}
 	function recovery() {
 	}
