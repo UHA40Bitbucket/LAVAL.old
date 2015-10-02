@@ -10,8 +10,8 @@ class User extends Model{
 	 * Enregistre un utilisateur en basse de donnée
 	 */
 
-	public function create($firstName, $lastName, $mail, $pass){
-		$this->db->query("INSERT INTO users (firstName, lastName, mail, pass) VALUES ('".$firstName."', '".$lastName."', '".$mail."', '".md5($pass)."')");
+	public function create($user){
+		$this->db->query("INSERT INTO users (firstName, lastName, mail, pass) VALUES ('".$user['firstName']."', '".$user['lastName']."', '".$user['mail']."', '".md5($user['pass'])."')");
 	}
 
 	/*
