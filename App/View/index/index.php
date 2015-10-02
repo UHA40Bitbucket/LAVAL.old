@@ -1,4 +1,8 @@
 <div class="container">
+<<<<<<< HEAD
+	   <?php echo $this->q; ?>
+=======
+>>>>>>> 1d1622b71fb77faf8ae3f624d21f129b50cb6ddd
 		<div class="panel panel-default">
 			<div class="panel-body vertical-align">
 				<div class="col-md-7 text-center">

@@ -29,6 +29,10 @@ class Database{
 
 	 private function getPDO(){
 	 	//Connection à la database
+<<<<<<< HEAD
+	 	$pdo = $this->pdo;
+=======
+>>>>>>> 1d1622b71fb77faf8ae3f624d21f129b50cb6ddd
 	 	if ($pdo === null){ // Si on a pas encore d'objet PDO (on est pas connecté)
 		 	$pdo = new PDO('mysql:dbname='.$this->database.';host='.$this->host.';charset=UTF8', $this->user, $this->pass); // Alors on se connecte
 		 	if($this->host == 'localhost'){ // Si on est en dev
