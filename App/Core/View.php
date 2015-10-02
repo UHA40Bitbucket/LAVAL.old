@@ -7,6 +7,7 @@
   	public  function __construct(){
   		
   	}
+<<<<<<< HEAD
     
     public function getParams(){
       return $this->$param;
@@ -16,6 +17,12 @@
     public function render($name, $isInclude = false)
   	{
       
+=======
+
+
+    public function render($name, $isInclude = false)
+  	{
+>>>>>>> 1d1622b71fb77faf8ae3f624d21f129b50cb6ddd
       if($isInclude == true){
         
         require 'View/' . $name . '.php';

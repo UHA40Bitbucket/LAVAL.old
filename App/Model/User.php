@@ -6,6 +6,10 @@ use App\Core;
  */
 class User extends Model{
 
+	function _construct(){
+ 		parent::__construct();
+ 	}
+
 	/*
 	 * Enregistre un utilisateur en basse de donnée
 	 */
@@ -63,3 +67,4 @@ class User extends Model{
 		return ($data)? $data : false;
 	}
 }
+

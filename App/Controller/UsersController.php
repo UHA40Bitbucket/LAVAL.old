@@ -55,4 +55,3 @@ class UsersController extends Controller {
 		$this->view->user = $user;
 		$this->view->render('getUser');
 	}
-}
