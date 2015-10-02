@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 namespace App\Model;
 use App\Core;
@@ -5,10 +6,6 @@ use App\Core;
  * Gestion des données utilisateur
  */
 class User extends Model{
-
-	function _construct(){
- 		parent::__construct();
- 	}
 
 	/*
 	 * Enregistre un utilisateur en basse de donnée
@@ -67,4 +64,22 @@ class User extends Model{
 		return ($data)? $data : false;
 	}
 }
+=======
+<?php 
+ use App\core\Model\Model;
 
+ Class User extends Model{
+	 
+ 	private $tab = array(1,2,3,4);
+	 
+ 	function _construct(){
+ 		parent::__construct();
+ 	}
+	
+	public function getTab(){
+		return $this->tab;
+	}
+	
+ }
+
+>>>>>>> 1d1622b71fb77faf8ae3f624d21f129b50cb6ddd

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php
 namespace App\Controller;
 use App\Core;
@@ -55,3 +56,22 @@ class UsersController extends Controller {
 		$this->view->user = $user;
 		$this->view->render('getUser');
 	}
+=======
+
+
+
+<?php
+
+use App\Core\Controller\Controller;
+
+/*
+*  Gestion de la logique utilisateur
+*/
+
+class UsersController extends Controller{
+	
+ 
+   
+
+>>>>>>> 1d1622b71fb77faf8ae3f624d21f129b50cb6ddd
+}
